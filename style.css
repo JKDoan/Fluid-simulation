@@ -1,0 +1,252 @@
+@font-face {
+  font-family: "iconfont";
+  src: url("iconfont.ttf") format("truetype");
+}
+
+* {
+  user-select: none;
+}
+
+html,
+body {
+  overflow: hidden;
+  background-color: #000;
+}
+
+body {
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.dg {
+  opacity: 0.9;
+}
+
+.dg .property-name {
+  overflow: visible;
+}
+
+.bigFont {
+  font-size: 150%;
+  color: #8c8c8c;
+}
+
+.cr.function.appBigFont {
+  font-size: 150%;
+  line-height: 27px;
+  color: #a5f8d3;
+  background-color: #023c40;
+}
+
+.cr.function.appBigFont .property-name {
+  float: none;
+}
+
+.cr.function.appBigFont .icon {
+  position: sticky;
+  bottom: 27px;
+}
+
+/* || Settings styling */
+
+.settings {
+  display: none;
+  /* display: table; */
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: auto;
+  color: lightblue;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: settings-appear-animation 0.35s ease-out;
+}
+
+.settings-middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.settings-content {
+  width: 80vw;
+  height: 80vh;
+  max-width: 80vh;
+  max-height: 80vw;
+  margin: auto;
+  padding: 0;
+  font-size: 2.8vmax;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  text-align: center;
+  background-image: url("settings_back.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.settings-header {
+  height: 10%;
+  padding: 2px 16px;
+}
+
+.settings-close {
+  width: 10%;
+  height: 100%;
+  text-align: left;
+  float: left;
+  font-size: 1.3em;
+  /* transition: 0.2s; */
+}
+
+.settings-close:hover {
+  /* transform: scale(1.25); */
+  cursor: pointer;
+}
+
+.dg.main .close-button {
+  color: white;
+  font-size: 14px;
+  height: 26px;
+  padding-top: 6px;
+}
+
+.settings-body {
+  padding: 8px 16px 16px 16px;
+  margin: auto;
+}
+
+.settings-body p {
+  margin-top: 0;
+  mix-blend-mode: color-dodge;
+}
+
+.link {
+  width: 100%;
+  display: inline-block;
+}
+
+.link img {
+  width: 100%;
+}
+
+@keyframes settings-appear-animation {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* || Border styling */
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.header .bar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 32px;
+  z-index: 0;
+  background-color: white;
+  border-radius: 0 0 22px 22px;
+}
+
+.header .container {
+  position: absolute;
+  top: 0;
+  width: 20%;
+  z-index: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 22px;
+}
+
+.container h1,
+.container p {
+  margin: 8px 0 8px 0;
+  padding: 6px;
+}
+
+/* || Mood Unit styling */
+
+.mood {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  background-color: white;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 16px;
+}
+
+.mood h1 {
+  margin: 8px 0 8px 0;
+  padding: 12px;
+  border-bottom: 2px solid #000;
+}
+
+.mood ul {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  margin: 8px;
+  padding: 0;
+}
+
+.mood ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.mood h2 {
+  margin: 8px 0 8px 0;
+  padding: 6px;
+  font-weight: 300;
+}
+
+.mood li .color-square {
+  width: 28px;
+  height: 6px;
+  border-radius: 4px;
+  background-color: green;
+}
+
+.mood li:nth-child(2) .color-square {
+  background-color: pink;
+}
