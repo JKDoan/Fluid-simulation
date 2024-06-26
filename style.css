@@ -231,22 +231,29 @@ canvas {
   flex-direction: row;
   align-items: center;
   gap: 16px;
-  width: 100%;
+  width: auto;
 }
 
 .mood h2 {
-  margin: 8px 0 8px 0;
-  padding: 6px;
+
   font-weight: 300;
 }
 
 .mood li .color-square {
-  width: 28px;
-  height: 6px;
+  width: 40px;
+  height: 10px;
   border-radius: 4px;
-  background-color: green;
+  background-color: rgb(43, 212, 43);
+}
+
+#yellow{
+  background-color: rgb(255, 204, 62);
 }
 
 .mood li:nth-child(2) .color-square {
-  background-color: pink;
+  background-color: rgb(52, 0, 208);
+}
+
+#purple{
+  background-color: rgb(127, 21, 184);
 }
